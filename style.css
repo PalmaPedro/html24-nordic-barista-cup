@@ -1,0 +1,345 @@
+/* general style */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style-type: none;
+}
+
+body {
+    color:#fff;
+    text-align: center;
+    font-weight: bold;
+    background: #05305B!important;
+    /*background: url(/img/image-L.png); */
+    padding-bottom: 80px;  /* leave space at the bottom for background color */
+}
+    
+/* define the website grid layout */
+.container {
+    display: grid;
+    max-width: 990px!important;
+    /*box-shadow: 2px 2px 20px 30px;  /* glow effect around the layout */
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:
+    "nav nav nav nav nav nav"
+    "nav nav nav nav nav nav"
+    "showcase showcase showcase showcase showcase showcase"
+    "showcase showcase showcase showcase showcase showcase"
+    "showcase showcase showcase showcase showcase showcase"
+    "showcase showcase showcase showcase showcase showcase"
+    "showcase showcase showcase showcase showcase showcase"
+    "showcase showcase showcase showcase showcase showcase"
+    "social social social social social social"
+    "social social social social social social"
+    "blog1 blog1 blog1 blog1 shop shop"
+    "blog1 blog1 blog1 blog1 shop shop"
+    "blog1 blog1 blog1 blog1 shop shop"
+    "blog1 blog1 blog1 blog1 events events"
+    "blog2 blog2 blog2 blog2 events events"
+    "blog2 blog2 blog2 blog2 events events"
+    "blog2 blog2 blog2 blog2 events events"
+    "blog2 blog2 blog2 blog2 scores scores"
+    "blog3 blog3 blog3 blog3 scores scores"
+    "blog3 blog3 blog3 blog3 scores scores"
+    "blog3 blog3 blog3 blog3 scores scores"
+    "blog3 blog3 blog3 blog3 scores scores"
+    "pagination pagination pagination pagination scores scores"
+    "sponsors sponsors sponsors sponsors sponsors sponsors"
+    "sponsors sponsors sponsors sponsors sponsors sponsors"
+    "sponsors sponsors sponsors sponsors sponsors sponsors"
+    "sponsors sponsors sponsors sponsors sponsors sponsors"
+    "sponsors sponsors sponsors sponsors sponsors sponsors"
+    "footer footer footer footer footer footer"
+    "footer footer footer footer footer footer"
+    "footer footer footer footer footer footer"
+    "footer footer footer footer footer footer"
+    "footer footer footer footer footer footer"
+    "footer footer footer footer footer footer"
+    "footer footer footer footer footer footer";
+    /*grid-gap: 15px; */
+    margin: 0 auto;
+}
+
+/*
+header, nav, aside, article, section, footer {
+    border: 1px solid black; 
+    background-color: darkgrey;
+    
+}*/
+
+/* navigation bar*/
+.nav-wrapper {
+    grid-area: nav;
+    background-color: #0f0f0f;
+}
+
+.title-area {
+    width:399;
+    height:58;
+    margin:27px 25px 15px;
+    overflow: hidden;
+    float: left;  
+}
+
+#title a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: #fff;
+}
+
+#title span {
+    color: #636363;
+}
+
+.description {
+    word-spacing: 0.4em;
+}
+.description li {
+    display: inline;
+    color:#e8e8e8;
+    display: inline;
+    font-size: 17px;
+    letter-spacing: .2em;
+    word-spacing: 0.1em;
+}
+
+.widget-area {
+    float: right;
+    margin: 15px 20px;
+}
+
+.widget-area  input[type=text] {
+    padding: 4px;
+    font-size: 10px;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    font-family: georgia;
+    box-shadow:inset -3px 5px 5px -3px #888;
+}
+
+.widget-area .widget-wrap button {
+    padding: 4px 4px;
+    margin-right: -4px;
+    font-size: 10px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    font-family: georgia;
+    box-shadow:inset 3px 5px 5px -3px #888;
+    background: #fff;
+  }
+
+.nav {
+    width: fit-content;
+    margin: 32px 25px;
+    float: right;
+    word-spacing: 0.2em;
+}
+
+.nav-wrap li {
+    display: inline;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-wrap a {
+    color: #fff;
+}
+
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    
+}
+
+/* social media links*/
+.social-area { 
+     grid-area: social;
+     display: block;
+     background-color: #131415;
+}
+
+.wrap-cite {
+    width: 550px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.cite {
+    font-size:25px;
+}
+
+q{
+    color:#a3a3a3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.icons {
+    margin: 20px 25px;
+    float: right;
+    
+}
+.icons li {
+    display: inline;
+    position: relative;
+    top: 20px;
+   
+}
+
+/* blog area*/
+.blog1 {
+    grid-area: blog1;
+    background-color: #fff;
+        
+    
+}
+
+.content {
+    padding: 15px;
+  }
+
+.blog2 {
+    grid-area: blog2;
+    background-color: #fff;
+}
+
+.blog3 {
+    grid-area: blog3;
+    background-color: #fff;
+}
+
+/* sidebar shop-area */
+.shop {
+    grid-area: shop;
+    background-image: linear-gradient(#e8e8e8, #f2f2f2);
+}
+
+
+
+/* sidebar events-area */
+.events {
+    grid-area: events;
+    background-image: linear-gradient(#f2f2f2, #f5f5f5);
+}
+
+/* sidebar scoreboard-area */
+.scores {
+    grid-area: scores;
+    background-image: linear-gradient(#f5f5f5, #fff);
+}
+
+
+/* pagination area*/
+#pagination {
+    grid-area: pagination;
+    background-color: #fff;
+}
+
+/* sponsors gallery */
+.sponsors {
+    grid-area: sponsors;
+    background-color: #fff;
+}
+
+.sponsor-gallery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+}
+
+.sponsor-gallery img {
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+/* footer */
+footer {
+    grid-area: footer;
+    background-color: #131415;
+    
+
+}
+
+.nested-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(350px, auto);
+    grid-gap: 1.5em;
+    }
+
+    .nested-footer > div {
+    border:#fff 1px solid;
+    padding: 1em;
+    }
+
+
+
+
+
+
+
+
+
+
+  
+/* end of grid layout */
+
+/*
+style navigation bar area 
+.topnav {
+    background-color: #181919;
+    overflow: hidden;
+}
+
+style title header 
+
+#title-header {
+    float: left;
+    text-align: left;
+}
+#title-header h1 {
+    margin-left: 8px;
+}
+
+#title-header h3 {
+    margin-top: 0px;
+    margin-left: 8px;
+}
+
+style the navigation bar links 
+
+#nav-links ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav-links li {
+    display: block;
+    pa
+}
+
+style search-bar 
+#nav-search input[type=text] {
+    margin-right: 8px;
+    margin-top: 8;
+    padding: 6px;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    font-size: 10px;
+}
+*/
+
+
+
+
