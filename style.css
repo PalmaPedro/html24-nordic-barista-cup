@@ -117,7 +117,7 @@ header, nav, aside, article, section, footer {
     font-size: 10px;
     border: none;
     border-radius: 0 50px 50px 0;
-    font-family: georgia;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     box-shadow:inset -3px 5px 5px -3px #888;
 }
 
@@ -133,17 +133,19 @@ header, nav, aside, article, section, footer {
   }
 
 .nav {
-    width: fit-content;
-    margin: 32px 25px;
-    float: right;
-    word-spacing: 0.2em;
+    position: absolute;
+    right: 220px;
+    width: auto;
+    top: 88px;
 }
 
 .nav-wrap li {
     display: inline;
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
 }
 
 .nav-wrap a {
@@ -157,75 +159,88 @@ header, nav, aside, article, section, footer {
     background-size: cover;
     background-position: center;
     padding: 3rem;
-    display: flex;
-    
 }
 
 /* social media links*/
-.social-area { 
+.social { 
      grid-area: social;
-     display: block;
      background-color: #131415;
 }
 
-.wrap-cite {
-    width: 550px;
-    margin-top: 20px;
-    margin-left: 20px;
+.social-container {
+    overflow: hidden;
+    width: 960px;
+    height: 115px;
 }
 
-.cite {
-    font-size:25px;
-}
-
-q{
-    color:#a3a3a3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.icons {
-    margin: 20px 25px;
-    float: right;
-    
-}
-.icons li {
-    display: inline;
+.quote {
     position: relative;
-    top: 20px;  
+    left: 20px;
+    top: 20px;
+    width: 550px;
 }
+
+.icons i{
+    width: auto;
+    position: relative;
+  
+}
+
+
 
 /* blog area*/
 .blog {
     grid-area: blog;
     background-color: #fff;
+    padding: 30px 0px 0px 30px;
 }
 
-.nested-blogs > div{
-    padding: 2em;
-    height: 245px;
-    width: 715px;
-}
-
-.nested-blogs img {
-    border: 5px solid #e9e9e9;
-    outline: .5px solid #fff;
-    outline-offset: -2px;
-    flex-shrink: 0;
-}
-
-.nested-blogs h4  {
-    display: inline-block;
-    margin-left: 1em;
-    margin-bottom: 2em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.blog-container {
+    position: relative;
     overflow: hidden;
+    height: 210px;
+    width: 650px;
 }
 
-.nested-blogs p {
-    display: inline-flex;
-    width: 400px;
+.images {
+   width: fit-content;
 }
 
+.content {
+    position: absolute;
+    width: 65%;
+    top: 0em;
+    left: 25%;
+}
+
+.content h4 {
+    font-family: 'EB Garamond', serif;
+}
+
+.content h6 {
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2c83af
+}
+
+.content p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2f2f2f;
+    font-size: 15px;
+}
+
+.content button {
+    width: 145px;
+    height: 28px;
+    font-size: 12px;
+    
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
 
 /* sidebar shop-area */
 .shop {
@@ -239,6 +254,7 @@ q{
 
 .shop ul>li {
     margin-left: 1.5em;
+    font-family: 'EB Garamond', serif;
 }
 
 .shop a {
@@ -253,6 +269,7 @@ q{
 
 .events h4 {
     padding: 1em;
+    font-family: 'EB Garamond', serif;
 }
 
 .events ul>li {
@@ -272,6 +289,7 @@ q{
 
 .scores h4 {
     padding: 1em;
+    font-family: 'EB Garamond', serif;
 }
 
 .scores p {
@@ -287,7 +305,9 @@ q{
 #pagination {
     grid-area: pagination;
     background-color: #fff;
-    padding-left: 2em;
+    padding-left: 3em;
+    font-size: 10px;
+    color: #9A9DA1;
 }
 
 /* sponsors gallery */
@@ -297,6 +317,8 @@ q{
 }
 
 .sponsors h4 {
+    font-family: 'EB Garamond', serif;
+    font-size: 25px;
     padding-left: 1.5em;
 }
 
