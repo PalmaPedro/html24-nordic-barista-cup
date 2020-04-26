@@ -203,7 +203,8 @@ header, nav, aside, article, section, footer {
 }
 
 .images {
-   width: fit-content;
+    width: fit-content;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
 .content {
@@ -239,7 +240,7 @@ header, nav, aside, article, section, footer {
 hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    
 }
 
 /* sidebar shop-area */
@@ -296,8 +297,11 @@ hr {
     margin-left: 1.5em;
 }
 
-.scores ul>li {
+.scores ul>li, p {
     margin-left: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+    color: #6e6d6d;
 }
 
 
@@ -347,73 +351,35 @@ footer {
     grid-auto-rows: minmax(350px, auto);
     grid-gap: 1.5em;
     padding: 2em;
-    margin-bottom:2em;
+   
     }
 
     .nested-footer > div {
-    border:#fff 1px solid;
     padding: 1em;
     }
 
+    .nested-footer h2 {
+        font-family: 'EB Garamond', serif;
+        font-size: 23px;
+        color:#fff;
+    }
 
+    .nested-footer p,q {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 13px;
+        color: #6e6d6d;
+    }
 
-
-
-
-
-
-
-
-  
-/* end of grid layout */
-
-/*
-style navigation bar area 
-.topnav {
-    background-color: #181919;
-    overflow: hidden;
-}
-
-style title header 
-
-#title-header {
-    float: left;
-    text-align: left;
-}
-#title-header h1 {
-    margin-left: 8px;
-}
-
-#title-header h3 {
-    margin-top: 0px;
-    margin-left: 8px;
-}
-
-style the navigation bar links 
-
-#nav-links ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-#nav-links li {
-    display: block;
-    pa
-}
-
-style search-bar 
-#nav-search input[type=text] {
-    margin-right: 8px;
-    margin-top: 8;
-    padding: 6px;
-    border: none;
-    border-radius: 0 50px 50px 0;
-    font-size: 10px;
-}
-*/
-
-
-
+    .flickr h2 {
+        font-family: 'EB Garamond', serif;
+        font-size: 23px;
+        color:#fff;
+    }
+    .flickr .subgrid {
+        display: grid;
+        padding: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(63px, 1fr));
+        position: relative;
+        top: 15px;
+    }
 
