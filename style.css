@@ -9,7 +9,7 @@ list-style-type: none;
 body {
     color:#fff;
     text-align: center;
-    font-weight: bold;
+    /*font-weight: bold;*/
     background: #05305B!important;
     /*background: url(/img/image-L.png); */
     padding-bottom: 80px;  /* leave space at the bottom for background color */
@@ -18,7 +18,7 @@ body {
 /* define the website grid layout */
 .container {
     display: grid;
-    max-width: 990px!important;
+    max-width: 960px !important;
     /*box-shadow: 2px 2px 20px 30px;  /* glow effect around the layout */
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(50px, auto);
@@ -59,15 +59,32 @@ body {
     "footer footer footer footer footer footer"
     "footer footer footer footer footer footer";
     /*grid-gap: 15px; */
-    margin: 0 auto;
+    /*margin: 0 auto; */
 }
 
-/*
-header, nav, aside, article, section, footer {
-    border: 1px solid black; 
-    background-color: darkgrey;
-    
-}*/
+/*  glowing effect around container*/
+
+.container:before {
+    content:'';
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1px;
+}
+
+.container:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -2px;
+    filter: blur(40px) !important;
+}
+
+
 
 /* navigation bar*/
 .nav-wrapper {
@@ -168,24 +185,27 @@ header, nav, aside, article, section, footer {
 }
 
 .social-container {
-    overflow: hidden;
-    width: 960px;
-    height: 115px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(120px, auto);
+    grid-gap: 2em;
+    padding: 1em;
+
 }
 
-.quote {
-    position: relative;
-    left: 20px;
-    top: 20px;
+.quote p {
     width: 550px;
+    font-family: 'EB Garamond', serif;
+    color: #a3a3a3;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
-.icons i{
-    width: auto;
-    position: relative;
-  
+.wrap-icons {
+    padding-left: 60px;
+    padding-top: 30px;
 }
-
 
 
 /* blog area*/
@@ -228,19 +248,18 @@ header, nav, aside, article, section, footer {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #2f2f2f;
     font-size: 15px;
+    margin-left: 0px;
 }
 
 .content button {
     width: 145px;
     height: 28px;
     font-size: 12px;
-    
 }
 
 hr {
     border: 0;
-    height: 1px;
-    
+    height: 1px;  
 }
 
 /* sidebar shop-area */
@@ -275,6 +294,9 @@ hr {
 
 .events ul>li {
     margin-left: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2f2f2f;
+    font-size: 13px;
 }
 
 .events a {
@@ -310,7 +332,7 @@ hr {
     grid-area: pagination;
     background-color: #fff;
     padding-left: 3em;
-    font-size: 10px;
+    font-size: 12px;
     color: #9A9DA1;
 }
 
@@ -350,12 +372,12 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(350px, auto);
     grid-gap: 1.5em;
-    padding: 2em;
+    padding: 1em;
    
     }
 
     .nested-footer > div {
-    padding: 1em;
+        padding:1em;
     }
 
     .nested-footer h2 {
@@ -364,9 +386,11 @@ footer {
         color:#fff;
     }
 
-    .nested-footer p,q {
+    .nested-footer p {
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 13px;
+        margin-left: 0px;
+        margin-top: 20px;
         color: #6e6d6d;
     }
 
@@ -377,9 +401,35 @@ footer {
     }
     .flickr .subgrid {
         display: grid;
-        padding: 10px;
         grid-template-columns: repeat(auto-fit, minmax(63px, 1fr));
+        grid-gap:10px;
         position: relative;
         top: 15px;
     }
+
+    .contacts h2 {
+        font-family: 'EB Garamond', serif;
+        font-size: 23px;
+        color:#fff;
+    }
+
+    .contacts p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 13px;
+        margin-left: 0px;
+        color: #a3a3a3;
+    }
+
+    .contacts ul>li {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 13px;
+        margin-left: 0px;
+        color: #6e6d6d;
+    }
+
+    .icons {
+        margin-top: 30px;
+    }
+
+    
 
