@@ -4,4 +4,6 @@ jquery scripts:
 2 - search and highlight keyword(s) when found
 3 - read more/less button
 4 - pagination
+
+
 */
