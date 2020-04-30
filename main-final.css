@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    list-style-type: none;
-    text-decoration-line: none;
   }
 
 /* general styles */
@@ -9,7 +7,7 @@ body {
     background: #05305b!important;
     padding-bottom: 80px;
     text-align: center;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color:#fff;
     margin: 0;
 }
@@ -73,22 +71,16 @@ header, nav, aside, article, section, footer {
     background-color: #0f0f0f;
 }
 
-#nav-wrapper a, li{
-    text-decoration: none;
-    display: inline;
-    margin: 1px;
-}
-
 /* showcase images area */
 
 /* moto-social area */
 #moto-social {
-    background-color: #131415;
+    background-color: #131415;;
 }
 
 /* sidebar area */
 #sidenav-wrapper {
-    background-image: linear-gradient(#EAEAEA, #fff);
+    background-image: linear-gradient(#f2f2f2, #fff);
 }
 
 /* blogs area */
@@ -117,73 +109,39 @@ header, nav, aside, article, section, footer {
     .grid{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: minmax(55px, auto);
-        
-    }
-
-    .grid-social {
-        font-size: 75%;
-    }
-
-    .grid-sponsors {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-
-    .grid-footer .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        grid-gap:10px;
-        position: relative;
-        top: 15px;
+        grid-auto-rows: minmax(120px, auto);
     }
 
 }
 
 @media (min-width: 768px){
     .grid{
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(120px, auto);
     }
 
-    #moto-social {
+    #main-content{
         display: grid;
         grid-template-columns: 715px 245px;
-        grid-auto-rows: minmax(110px, auto);
+        grid-template-rows: auto;
     }
 
     .grid-social {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: minmax(110px, auto);
-    }
-
-    .grid-sponsors {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: 576px 384px;
+        grid-template-rows: auto;
     }
    
     .grid-footer {
         display: grid;
-        grid-template-columns: 320px 345px;
         grid-template-columns: repeat(3, 1fr);
-        
+        grid-auto-rows: minmax(120px, auto);
     }
     
 }
 
 @media (min-width: 1200px){
-    #main-content{
-        display: grid;
-        grid-template-columns: 715px 260px;
-        grid-template-rows: auto;
-    }
+    
 
-    .grid-sponsors {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    
-    
-    
 }
