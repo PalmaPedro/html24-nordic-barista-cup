@@ -109,7 +109,16 @@ header, nav, aside, article, section, footer {
     .grid{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: minmax(120px, auto);
+        grid-auto-rows: minmax(55px, auto);
+    }
+
+    .moto {
+        font-family: 'EB Garamond', serif;
+        color: #a3a3a3;
+    }
+
+    .social i {
+        color: #a3a3a3;
     }
 
 }
@@ -118,7 +127,29 @@ header, nav, aside, article, section, footer {
     .grid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: minmax(120px, auto);
+        grid-auto-rows: minmax(55px, auto);
+    }
+
+    .grid-social {
+        display: grid;
+        grid-template-columns: 576px 384px;
+        grid-template-rows: minmax(140px, auto);
+    }
+
+    .moto p{
+        
+        font-size: 28px;
+        text-align: left;
+        margin-top: 25px;
+        margin-left: 25px
+    }
+
+    .social {
+        margin-left: 80px;
+    }
+    .social i{
+        margin-top: 40px;
+        margin-right: 2px;
     }
 
     #main-content{
@@ -127,16 +158,10 @@ header, nav, aside, article, section, footer {
         grid-template-rows: auto;
     }
 
-    .grid-social {
-        display: grid;
-        grid-template-columns: 576px 384px;
-        grid-template-rows: auto;
-    }
-   
     .grid-footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: minmax(120px, auto);
+        grid-auto-rows: minmax(55px, auto);
     }
     
 }
