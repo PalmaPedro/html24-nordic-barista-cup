@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+
 /* general styles */
 body {
     background: #05305b!important;
@@ -63,52 +67,72 @@ header, nav, aside, article, section, footer {
 
 
 /* navigation area */
-.nav-wrapper {
+#nav-wrapper {
     background-color: #0f0f0f;
 }
 
 /* showcase images area */
 
 /* moto-social area */
-.moto-social {
+#moto-social {
     background-color: #131415;;
 }
 
 /* sidebar area */
-.sidenav-wrapper {
+#sidenav-wrapper {
     background-image: linear-gradient(#f2f2f2, #fff);
 }
 
 /* blogs area */
-.article-wrapper {
+#article-wrapper {
     background-color: #fff;
 }
 
 /* pagination area */
-.pagination- {
+#pagination- {
     background-color: #fff;
 }
 
 /* sponsors area */
-.sponsors {
+#sponsors {
     background-color: #fff;
 }
 
 /* footer */
-.footer-wrapper {
+#footer-wrapper {
     background-color: #131415;
 }
 
 /* responsiveness */
 
-@media (min-width: 768px){
-    .moto-social{
+@media (min-width: 375px){
+    .grid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(120px, auto);
-        grid-gap: 2em;
-        padding: 1em;
+        grid-gap: 0;
+        padding: 0;
     }
+
+}
+
+@media (min-width: 768px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(120px, auto);
+        grid-gap: 0;
+        padding: 0;
+    }
+   
+    .grid-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(120px, auto);
+        grid-gap: 0;
+        padding: 0;
+    }
+    
 }
 
 @media (min-width: 1200px){
