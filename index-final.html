@@ -12,16 +12,46 @@
      <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
      <!-- link to css file -->
      <link rel="stylesheet" href="main-final.css">
+     <!-- Garamond font-->
+     
     <title>nbc2011</title>
 </head>
 <body>
     <div class="container">
         <!-- main navigation bar-->
         <nav id="nav-wrapper" class="grid">
-            <div class="nav-area1">nbc-title</div>
-            <div class="nav-area2">search-bar</div>
-            <div class="nav-area3">nbc-moto</div>
-            <div class="nav-area4">navigation-bar</div>
+            <div class="nav-area1">
+                <a href="#">Nordic <span>Barista</span> Cup</a>
+            </div>
+            <div class="nav-area2">
+                <div class="widget-area">
+                    <div class="widget-search">
+                        <div class="widget-wrap">
+                            <form>
+                                <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
+                                <input type="text" placeholder="Search..." name="search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-area3">
+                <ul class="description">
+                    <li>be together</li>
+                    <li>act together</li> 
+                    <li>learn together</li> 
+                </ul>
+            </div>
+            <div class="nav-area4">
+                <ul class="nav-wrap">
+                    <li><a href="#">about nbc</a></li>
+                    <li><a href="#">2011 event</a></li>
+                    <li><a href="#">nordic roaster</a></li>
+                    <li><a href="#">results</a></li>
+                    <li><a href="#">links</a></li>
+                    <li><a href="#">contacts</a></li>
+                </ul>
+            </div>
         </nav>
 
         <!-- showcase images-->
@@ -30,7 +60,7 @@
         </section>
 
         <!-- moto and social media icons-->
-        <section id="moto-social" class="grid">
+        <section id="moto-social" class="grid-social">
             <div class="moto">
                 <p>"To create an environment in which
                     knowledge about coffee and its sphere can be obtained."</p>
@@ -44,6 +74,7 @@
             </div>
         </section>
 
+        <!-- articles and side navigation-->
         <section id="main-content" class="grid">
         <!-- blog articles-->
         <article id="article-wrapper">
@@ -53,23 +84,113 @@
         </article>
         <!-- side-nav-->
         <aside id="sidenav-wrapper">
-            <div class="sidenav1">sidenav1</div>
-            <div class="sidenav2">sidenav2</div>
-            <div class="sidenav3">sidenav3</div>
+            <div class="sidenav1">
+                <h4>NBC Shop</h4>
+                <ul>
+                    <li>Your shopping cart is empty</li>
+                    <a href="#">Visit the shop</a>
+                </ul>
+            </div>
+            <div class="sidenav2">
+                <h4>Next Event</h4>
+                <ul>
+                    <li>NORDIC BARISTA CUP EVENT 2011</li>
+                    <li>Copenhagen, Denmark</li>
+                    <li>Dates 25th-27th August 2011</li>
+                    <li>THEME: Sensory</li>
+                </ul>
+                <a href="#">Sign up now</a>
+            </div>
+            <div class="sidenav3">
+                <h4>Scoreboard</h4>
+        <p>List of winners from past years</p>
+        <ul>
+            <li>2011 - ?</li>
+            <li>2010 - Sweden</li>
+            <li>2009 - Denmark</li>
+            <li>2007 - Sweden</li>
+            <li>2006 - Norway</li>
+            <li>2005 - Norway</li>
+            <li>2004 - Denmark</li>
+        </ul>
+            </div>
         </aside>
         </section>
 
         <!-- pagination-->
-        <section id="pagination-">pagination</section>
+        <section id="pagination-">
+            <br>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+              <br>
+            </section>
 
         <!-- sponsors-->
-        <section id="sponsors">sponsors</section>
+        <section id="sponsors">
+            <div>
+                <h4>Nordic Barista Cup Sponsors</h4>
+            </div>
+            <div class="grid-sponsors">
+                <img src="/sponsors/1._dellacorte.jpg" alt="">
+                <img src="/sponsors/2._nespresso.jpg"">
+                <img src="/sponsors/3._smartroaster.jpg" alt="">
+                <img src="/sponsors/4._cafetto.jpg" alt="">
+                <img src="/sponsors/5._Wilfa.jpg" alt="">
+                <img src="/sponsors/6._bunn.jpg" alt="">
+                <img src="/sponsors/7._davinci.jpg" alt="">
+                <img src="/sponsors/8._lincoln.jpg "alt="">
+                <img src="/sponsors/9._mercanta.jpg" alt="">
+                <img src="/sponsors/15._OstergaardFrugtplantage.jpg" alt="">
+                <img src="/sponsors/16._panesco.jpg" alt="">
+                <img src="/sponsors/13._espresso-supply.jpg" alt="">
+                <img src="/sponsors/17._evasolo.jpg" alt="">
+                <img src="/sponsors/18._Inco.jpg" alt="">
+                <img src="/sponsors/19._Bendt-Brandt.jpg" alt="">
+                <img src="/sponsors/22._blueberryas.jpg" alt="">
+                <img src="/sponsors/23._deel.jpg" alt="">
+                <img src="/sponsors/23._Kailow_express.jpg" alt="">
+                <img src="/sponsors/24._DOtrading.jpg" alt="">
+           </div>
+        </section>
 
         <!-- footer -->
         <footer id ="footer-wrapper" class="grid-footer">
-            <div class="footer1">footer-left</div>
-            <div class="footer2">footer-center</div>
-            <div class="footer3">footer-right</div>
+                <div class="lefth-side">
+                    <h2>About Nordic Barista Cup</h2>
+                    <p>The vision within the Nordic Barista Cup is: </p>
+                    <p>"To create an environment in which
+                        knowledge about coffee and its sphere can be obtained."</p>
+                    <p>'...create an environment...'</p>
+                    <p>Combined with personally absorption having the opportunity to see and
+                        experience countries, people, traditions etc, will alwayas serve as
+                        a source of inspiration in out daily work.
+                        The organozaton behind the Nordic Barista Cup see it as its main purpose
+                        to be a part of creating this forum in which people can meet, bond and 
+                        achieve further knowledge
+                    </p>
+                </div>
+            <div class="center">
+                <div>
+                <h2>NBC Flickr Stream</h2>
+                </div>
+                <section class="gallery">
+                <img src="/flickr/1._flickr01.jpg" alt="">
+                <img src="/flickr/2._flickr02.jpg" alt="">
+                <img src="/flickr/3._flickr03.jpg" alt="">
+                <img src="/flickr/4._flickr04.jpg" alt="">
+                <img src="/flickr/5._flickr05.jpg" alt="">
+                <img src="/flickr/6._flickr06.jpg" alt="">
+                <img src="/flickr/7._flickr07.jpg" alt="">
+                <img src="/flickr/8._flickr08.jpg" alt="">
+                <img src="/flickr/9._flickr09.jpg" alt="">
+                </section>
+            </div>
+            <div class="rigth-side">footer-right</div>
         </footer>
 
      <!-- jquery -->
