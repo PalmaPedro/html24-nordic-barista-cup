@@ -1,14 +1,14 @@
 
 //jquery scripts:
 
-// === load different image every time the webpage is refreshe == 
+// === load different image every time the webpage is refreshed == 
 
 (function($){
         $.randomImage = {
             defaults: {
-                //you can change these defaults to your own preferences.
-                path: '/img/', //change this to the path of your images
-                myImages: ['showcase1.png', 'showcase2.png', 'showcase3.png', 'showcase4.png', 'showcase5.png' ] //put image names in this bracket. ex: 'harold.jpg', 'maude.jpg', 'etc'
+                path: '/slider/', 
+                myImages: ['showcase1.png', 'showcase2.png', 'showcase3.png', 'showcase4.png',
+                    'showcase5.png', 'showcase6.png', 'showcase7.png', 'showcase8.png', 'showcase9.png', 'showcase10.png'] //put image names in this bracket. ex: 'harold.jpg', 'maude.jpg', 'etc'
             }
         };
         
@@ -25,7 +25,6 @@
                     winnerImage = imageNames[lotteryNumber],
                     fullPath = config.path + winnerImage;
                     
-                    //put this image into DOM at class of randomImage
                     // alt tag will be image filename.
                     $(this).attr({
                         src: fullPath,

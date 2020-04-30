@@ -14,7 +14,7 @@ body {
 
 img {
     display:block;
-    width: 100px;
+    width: 100%;
     height: auto;
 }
 
@@ -30,15 +30,15 @@ h1, h2, h3 {
 
 
 header, nav, aside, article, section, footer {
-    border: 1px solid black;
-    padding: 25px;
+    /*border: 1px solid black; */
+    /*padding: 25px;*/
     background-color: lightgray;
 } 
 
 .container {
     position: relative;
     display: grid;
-    max-width: 960px!important;
+    max-width: 990px!important;
 }
 
 /* border glowing effect */
@@ -110,7 +110,6 @@ header, nav, aside, article, section, footer {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: minmax(120px, auto);
-        padding: 1em;
     }
 
 }
@@ -120,14 +119,12 @@ header, nav, aside, article, section, footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(120px, auto);
-        padding: 1em;
     }
    
     .grid-footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: minmax(120px, auto);
-        padding:1em;
     }
     
 }
