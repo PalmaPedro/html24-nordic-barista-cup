@@ -184,7 +184,42 @@ header, nav, aside, article, section, footer {
         font-size: 2.5em;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
-	}
+    }
+    
+    /* main-content */
+    .article1 img{
+        width: 50%;
+        box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+        padding:.3em;
+        margin-top:2em;
+        
+    }
+
+    .article1 h4  {
+        font-family: 'EB Garamond', serif;
+        color:#2f2f2f;
+    }
+    
+    .article1 h6{
+        font-size: 12px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #2c83af
+    }
+
+    .article1 p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #2f2f2f;
+        font-size: 15px;
+        margin-left: 0px;
+    }
+    
+
+
+    /* pagination */
+
+    /* sponsors */
+
+    /* footer */
 }
 
 @media (min-width: 768px) {
@@ -249,11 +284,22 @@ header, nav, aside, article, section, footer {
 		margin-right: 2px;
 	}
 
-	#main-content {
+    #main-content {
 		display: grid;
 		grid-template-columns: 715px 245px;
-		grid-template-rows: auto;
+        grid-template-rows: auto;
+        grid-template-rows: auto;
 	}
+
+    #grid-article1 {
+        display: grid;
+        grid-template-columns: 200px 515px;
+    }
+    .article1 img {
+        width: fit-content;
+        margin-left: 1.5em;
+
+    }
 
 	.grid-footer {
 		display: grid;
