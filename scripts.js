@@ -42,6 +42,19 @@
 
 //2 - search and highlight keyword(s) when found 
 //3 - read more/less button 
+
+$(document).ready(function(){
+    $(".read").click(function(){
+       $(this).prev().toggle();
+       $(this).siblings('.dots').toggle();
+       if($(this).text()=='read more'){
+     $(this).text('read less');
+       }
+       else{
+     $(this).text('read more');
+       }
+    });
+ });
 //4 - pagination ok!
 
 
