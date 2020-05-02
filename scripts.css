@@ -1,3 +1,6 @@
 
 /* read more / read less feature */
-.more {display: none;}
+p.more {
+    display: none;
+}
+
