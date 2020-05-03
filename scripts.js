@@ -1,7 +1,7 @@
 
 //jquery scripts:
 
-// === load different image every time the webpage is refreshed == 
+// === load different image every time the webpage is refreshed ===
 
 (function($){
         $.randomImage = {
@@ -41,7 +41,7 @@
     
 
 //2 - search and highlight keyword(s) when found 
-//3 - read more/less button 
+// =====  read more/less button ===== 
 
 var rm = $(".read_more"),
     moreText = "Read More",
@@ -53,6 +53,86 @@ rm.click(function () {
     $this.text($this.text() == moreText ? lessText : moreText);
 });
 
-//4 - pagination ok!
+// ==== pagination ====
+
+let numberOfItems = $('#article-wrapper .article').length;
+//alert(numberOfItems);
+let limitPerPage = 3;
+
+// only show 3 items per page
+$("#article-wrapper .article:gt(" + (limitPerPage - 1) + ")").hide();
+
+// number of pages needed
+let totalPages = Math.ceil(numberOfItems / limitPerPage);
+
+$(".pagination").append("<li class='current-page active'><a class='page-link' href='javascript:void(0)'>" + 1 + "</a></li>");  // active sets the first page as default
+
+// loop through and add a new page if less or equal than total pages needed
+for (let i = 2; i <= totalPages; i++){
+  $(".pagination").append("<li class='current-page'><a class='page-link' href='javascript:void(0)'>" + i + "</a></li>");
+}
+
+$(".pagination").append("<li id='next-page'><a class='page-link' href='javascript:void(0)'>" + 'Next' + "</a></li>");
+
+$(".pagination li.current-page").on("click", function() {  // !!!
+  if ($(this).hasClass("active")) {
+    return false;
+  } else {
+    //alert('user clicked on number page');
+    let currentPage = $(this).index(); // gives back the current number of the page
+    $(".pagination li").removeClass("active");
+    $(this).addClass("active");
+    $("#article-wrapper .article").hide();
+  
+    let grandTotal = limitPerPage * currentPage;
+
+    for (let i = grandTotal - limitPerPage; i < grandTotal; i++) {
+      $("#article-wrapper .article:eq(" + i + ")").show();
+    }
+  }
+  
+});
+
+// next page button
+$("#next-page").on("click", function () {
+  //alert('test');
+  let currentPage = $(".pagination li.active").index();
+  if (currentPage === totalPages) {
+    return false;
+  } else {
+    currentPage++; // goes one page up
+    $(".pagination li").removeClass("active");
+    $("#article-wrapper .article").hide();
+
+    let grandTotal = limitPerPage * currentPage;
+
+    for (let i = grandTotal - limitPerPage; i < grandTotal; i++) {
+      $("#article-wrapper .article:eq(" + i + ")").show();
+    }
+
+    $(".pagination li.current-page:eq(" + (currentPage - 1) + ")").addClass("active");  // index starts at 0
+  }
+});
+
+// previous page button
+$("#previous-page").on("click", function () {
+  //alert('test');
+  let currentPage = $(".pagination li.active").index();
+  if (currentPage === 1) {
+    return false;
+  } else {
+    currentPage--; // goes one page up
+    $(".pagination li").removeClass("active");
+    $("#article-wrapper .article").hide();
+
+    let grandTotal = limitPerPage * currentPage;
+
+    for (let i = grandTotal - limitPerPage; i < grandTotal; i++) {
+      $("#article-wrapper .article:eq(" + i + ")").show();
+    }
+
+    $(".pagination li.current-page:eq(" + (currentPage - 1) + ")").addClass("active");  // index starts at 0
+  }
+});
 
 
