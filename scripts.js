@@ -1,7 +1,7 @@
 
 //jquery scripts:
 
-// === load different image every time the webpage is refreshed ===
+// === NEW SHOWCASE IMAGE ON REFRESH ===
 
 (function($){
         $.randomImage = {
@@ -40,8 +40,37 @@
     });
     
 
-//2 - search and highlight keyword(s) when found 
-// =====  read more/less button ===== 
+// ==== SEARCH AND HIGHLIGHT  ==== 
+
+$(document).ready(function () {
+  $(".search").keyup(function () {
+      searchHighlight($(this).val());
+  })
+})
+
+function searchHighlight(searchText) {
+
+  if (searchText) {
+      let paragraph = $("p").text();
+      //let h1 = $("h1").text();
+      let searchExp = new RegExp(searchText, "ig");
+      let matches = paragraph.match(searchExp);
+      //alert(matches);
+      if (matches){
+          $("p").html(paragraph.replace(searchExp, function (match) {
+              return "<span class='highlight'>" + match + "</span>";
+          }));
+      } else {
+          $(".highlight").removeClass("highlight");
+      }
+  } else {
+      $(".highlight").removeClass("highlight");
+  }
+}
+
+
+   
+// =====  READ MORE / READ LESS BUTTONS ===== 
 
 var rm = $(".read_more"),
     moreText = "Read More",
@@ -53,7 +82,7 @@ rm.click(function () {
     $this.text($this.text() == moreText ? lessText : moreText);
 });
 
-// ==== pagination ====
+// ==== PAGINATION ====
 
 let numberOfItems = $('#article-wrapper .article').length;
 //alert(numberOfItems);

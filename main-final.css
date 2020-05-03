@@ -248,15 +248,23 @@ header, nav, aside, article, section, footer {
     /*navigation bar */
 
     .nav-area1 {
-        margin-top:1.5em;
-        margin-right:0;
+        margin-top:15px;
+        margin-left:38px;
+        text-align: left;
     }
     .nav-area1 a {
-        font-size:2.1em;
+        font-size:35px;
     }
 
+    .nav-area3 {
+        text-align: left;
+        padding:0;
+        margin:0;
+    }
     .nav-area3 li {
-        font-size: 1em;
+        font-size: 15px;
+        margin-right: 2px;
+        word-spacing: 0;
     }
 
     .nav-area2 .widget-search{
