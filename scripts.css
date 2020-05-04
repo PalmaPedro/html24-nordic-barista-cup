@@ -5,7 +5,8 @@ p.more {
 }
 
 /* search and highlight feature */
-.highlight {
-    background: yellow;
-    font-weight: bold;
+mark {
+  padding: 0;
+  background: yellow;
+  font-weight: bold;
 }

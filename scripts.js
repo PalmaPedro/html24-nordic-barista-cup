@@ -42,31 +42,122 @@
 
 // ==== SEARCH AND HIGHLIGHT  ==== 
 
-$(document).ready(function () {
-  $(".search").keyup(function () {
-      searchHighlight($(this).val());
-  })
-})
+let mark = new Mark(document.body);
+const options = {
+};
 
-function searchHighlight(searchText) {
+let matches = [];
 
-  if (searchText) {
-      let paragraph = $("p").text();
-      //let h1 = $("h1").text();
-      let searchExp = new RegExp(searchText, "ig");
-      let matches = paragraph.match(searchExp);
-      //alert(matches);
-      if (matches){
-          $("p").html(paragraph.replace(searchExp, function (match) {
-              return "<span class='highlight'>" + match + "</span>";
-          }));
-      } else {
-          $(".highlight").removeClass("highlight");
-      }
-  } else {
-      $(".highlight").removeClass("highlight");
+// Position
+let _position = 0;
+const getPosition = function() {
+  return _position;
+};
+const setPosition = function(newPosition) {
+  // update the position
+  let oldValue = _position;
+  if (matches.length == 0) {
+    _position = 0;
   }
+  else if (newPosition < 0) {
+    _position = 0;
+  }
+  else if (newPosition >= matches.length) {
+    _position = matches.length-1;
+  }
+  else {
+    _position = newPosition;
+  }
+  // callback
+  if (oldValue != _position) {
+    positionChanged(_position);    
+  }
+};
+const updatePosition = function() {
+  setPosition(_position);
 }
+const incrementPosition = function() {
+  setPosition(_position+1);
+};
+const decrementPosition = function() {
+  setPosition(_position-1);
+};
+
+// update num of matches
+
+//const updateNumOfMatches = function(position, numOfMatches) {
+//  let text = (numOfMatches > 0) ? (position+1) + " / " : "";
+//  numOfMatchesField.innerHTML = text + numOfMatches;  
+//};
+
+// callback
+const positionChanged = function(newPosition) {
+  console.log('position: '+newPosition);
+  // focus
+  focusMatch(window, matches, newPosition);
+  // highlight selected
+  highlightSelectedMatch(newPosition);
+  // count
+ // updateNumOfMatches(getPosition(), matches.length);
+  // disable / enable buttons
+}
+
+const textChanged = function(text) {
+  // highlight
+  mark.unmark(options)
+  if (text.length > 0) {
+    mark.mark(text, options);
+  }
+  // update num of matches
+  matches = document.querySelectorAll('[data-markjs]');
+  //numOfMatchesField.innerHTML = matches.length;
+ // updateNumOfMatches(getPosition(), matches.length);
+  // position
+  updatePosition();
+  // highlight
+  highlightSelectedMatch(getPosition());
+  // focus match
+  focusMatch(window, matches, getPosition());
+};
+
+// Forms and event handlers
+let searchField = document.querySelector('#searchField');
+let previousText = '';
+searchField.addEventListener('keyup', (e) => {
+  let text = searchField.value;
+  if (text != previousText) {
+    textChanged(text);
+    previousText = text;
+  }
+});
+//let prevButton = document.querySelector('#prevButton');
+//prevButton.addEventListener('click', (e) => {
+  //decrementPosition();
+//});
+//let nextButton = document.querySelector('#nextButton');
+//nextButton.addEventListener('click', (e) => {
+//  incrementPosition();
+// });
+let numOfMatchesField = document.querySelector('#numOfMatches');
+
+// scrolling
+const focusMatch = function(window, matches, position = 0, offset = 30) {
+  if (position < matches.length) {
+    let topOfMatch = matches[position].getBoundingClientRect().top;
+    window.scrollBy(0, topOfMatch-offset);
+  }
+};
+
+// highlight
+const highlightSelectedMatch = function(position) {
+  let selected = document.querySelector('.highlight');
+  if (selected != null) {
+    selected.classList.remove('selected');
+  }
+  if (matches[position] != null) {
+    matches[position].classList.add('selected');
+  }
+};
 
 
    
