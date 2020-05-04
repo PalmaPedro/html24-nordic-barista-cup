@@ -165,7 +165,7 @@ header, nav, aside, article, section, footer {
 
     .nav-area3 li{
         display: inline-block;
-        display: inline;
+        
         color:#e8e8e8;
         font-size: 1.5em;
         letter-spacing: .2em;
@@ -205,6 +205,8 @@ header, nav, aside, article, section, footer {
         box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
         padding:.3em;
         margin-top:2em;
+        margin-left: 7em;
+        margin-bottom: 1em;
     }
 
     .article h4  {
@@ -225,9 +227,14 @@ header, nav, aside, article, section, footer {
         text-align: left;
     }
     
-
-
     /* pagination */
+    .pagination {
+        grid-area: pagination;
+        background-color: #fff;
+        padding-left: 3em;
+        font-size: 12px;
+        color: #9A9DA1;
+    }
 
     /* sponsors */
 
@@ -328,6 +335,26 @@ header, nav, aside, article, section, footer {
 
     h4 {
         margin-top: 30px;
+    }
+
+    .sponsors h4 {
+        font-family: 'EB Garamond', serif;
+        font-size: 25px;
+        color: #6e6d6d;
+        padding-left: 1.5em;
+    }
+
+    .sponsor-gallery {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .sponsor-gallery img {
+        width: 100%;
+        box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
     }
 
 	.grid-footer {

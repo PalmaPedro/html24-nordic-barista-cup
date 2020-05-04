@@ -159,7 +159,6 @@ const highlightSelectedMatch = function(position) {
   }
 };
 
-
    
 // =====  READ MORE / READ LESS BUTTONS ===== 
 
@@ -210,7 +209,6 @@ $(".pagination li.current-page").on("click", function() {  // !!!
       $("#article-wrapper .article:eq(" + i + ")").show();
     }
   }
-  
 });
 
 // next page button
