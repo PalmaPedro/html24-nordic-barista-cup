@@ -12,7 +12,7 @@ const articleData = [
         id: 2,
         title: "Into The Icelandic Wild",
         date: "09/07-2009",
-        content: " This place is SO lovely, so deep in the woods, but we are hardly roughing it: the cabins we’re staying in today for our second night are absolutely beautiful, with hot tubs and a bar, of course! ",
+        content: " second night arThis place is SO lovely, so deep in the woods, but we are hardly roughing it: the cabins we’re staying in today for our e absolutely beautiful, with hot tubs and a bar, of course! ",
         image: "/blogs/02._blog02.jpg"
     },
     {
@@ -26,7 +26,7 @@ const articleData = [
         id: 4,
         title: "Nordic Barista Cup Of Excellence",
         date: "22/1-2011",
-        content: " It’s a special treat to have Susie Spindler of the Alliance for Coffee Excellence (ACE) and the Cup of Excellence (CoE) here in Iceland. ",
+        content: "competition unlike any I’ve ever seen. And in an interesting twist, the attendees joined the teams in the challenge: build a primitive roaster and grinder, and roast and grind coffee. (ACE) and the Cup of Excellence (CoE) here in Iceland. ",
         image: "/blogs/04._blog04.jpg"
     },
     {
@@ -109,13 +109,20 @@ const articleData = [
 ];
 
 
-
-function title(title) {
+document.getElementById("article-wrapper").innerHTML = `
+${articleData.map(function (blog) {
     return `
-    <h4>Wondeful Copenhagen 2011</h4>
+    <div class="article">
+        <img src="${blog.image}">
+        <div class="comment more">
+            <h4>${blog.title}</h4>
+            <h6 class="date">${blog.date}</h6> 
+            <p>${blog.content}</p>
+            <button type="button" class="read_more">Read More</button> 
+        </div>
+    </div>
     `
-}
-
+}).join('')}`
 
 
 

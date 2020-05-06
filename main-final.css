@@ -224,6 +224,8 @@ header, nav, aside, article, section, footer {
         font-family: Georgia, 'Times New Roman', Times, serif;
         color: #2f2f2f;
         font-size: 15px;
+        text-align: left;
+        padding-bottom:1em;
        
     }
 
@@ -264,6 +266,68 @@ header, nav, aside, article, section, footer {
     }
     
     /* footer */
+
+    .footer-left > div {
+        padding:1em;
+    }
+
+    .footer-left h2 {
+        font-family: 'EB Garamond', serif;
+        font-size: 23px;
+        color:#fff;
+        padding-top:1.5em;
+    }
+
+    .footer-left p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 13px;
+        margin-left: 0px;
+        margin-top: 20px;
+        color: #6e6d6d;
+    }
+
+    .footer-center h2 {
+        font-family: 'EB Garamond', serif;
+        font-size: 23px;
+        color:#fff;
+        padding-top: 1.5em;
+    }
+
+    .footer-center .subgrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:15px;
+        position: relative;
+        top: 1.5em;
+        padding:1em;
+    }
+
+    .footer-right h2 {
+        font-family: 'EB Garamond', serif;
+        font-size: 23px;
+        color:#fff;
+        padding-top:1.5em;
+        
+    }
+
+    .footer-right p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 13px;
+        color: #a3a3a3;
+    }
+
+    .footer-right ul>li {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 13px;
+      
+        color: #6e6d6d;
+    }
+
+    .icons {
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+        color: #a3a3a3;
+    }
 }
 
 @media (min-width: 768px) {
@@ -413,8 +477,18 @@ header, nav, aside, article, section, footer {
 	.grid-footer {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-auto-rows: minmax(55px, auto);
-	}
+        grid-auto-rows: minmax(55px, auto);
+        padding:1.5em;
+        grid-gap:2em;
+    }
+    
+    .footer-center .subgrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(63px, 1fr));
+        grid-gap:15px;
+        position: relative;
+        top: 15px;
+    }
 }
 
 @media (min-width: 1200px) {
